@@ -1,0 +1,25 @@
+.container{
+    width: 95%;
+    margin: auto;
+    border: 1px solid gray;
+    height: 1000px;
+}
+.main_container{
+    width: 100%;
+    border: 2px solid gray;
+    display: flex;
+    gap: 20px;
+    /* padding: 20px; */
+    justify-content: space-between;
+}
+#form_div{
+width: 40%;
+border: 2px solid rgb(60, 0, 128);
+}
+#table_div{
+    width: 60%;
+    /* border: 2px solid green; */
+}
+table{
+    width: 100%;
+}
