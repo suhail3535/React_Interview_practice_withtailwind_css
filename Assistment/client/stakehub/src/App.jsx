@@ -40,7 +40,7 @@ function App () {
       setError('Error fetching completed orders');
     }
   };
-// <---------------used for reset inpu----------->
+// <---------------used for reset input----------->
   const handleResetInput = () => {
     setPrice('');
     setQty('');

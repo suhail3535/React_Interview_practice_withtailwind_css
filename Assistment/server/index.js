@@ -10,17 +10,17 @@ const port = 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-// Connect to MongoDB
+// Connect to MongoDB database
 const connection = mongoose.connect(mongourl)
 
-// Models
+// Models for order schema
 const OrderSchema = new mongoose.Schema({
     buyerQty: Number,
     buyerPrice: Number,
     sellerPrice: Number,
     sellerQty: Number
 });
-
+// models for completedOrders schema
 const CompletedOrderSchema = new mongoose.Schema({
     price: Number,
     qty: Number
@@ -29,7 +29,7 @@ const CompletedOrderSchema = new mongoose.Schema({
 const Order = mongoose.model('Order', OrderSchema);
 const CompletedOrder = mongoose.model('CompletedOrder', CompletedOrderSchema);
 
-// Routes
+// Routes for get all order
 app.get('/orders', async (req, res) => {
     try {
         const orders = await Order.find();
@@ -38,6 +38,7 @@ app.get('/orders', async (req, res) => {
         res.status(500).json({ message: 'Error fetching orders', error });
     }
 });
+// Routes for get all Completed order
 
 app.get('/completedOrders', async (req, res) => {
     try {
@@ -48,6 +49,7 @@ app.get('/completedOrders', async (req, res) => {
     }
 });
 
+// Routes for get post order
 
 app.post('/order', async (req, res) => {
     let { type, qty, price } = req.body;
@@ -90,7 +92,7 @@ app.delete('/order/:id', async (req, res) => {
         res.status(500).json({ message: 'Error deleting order', error });
     }
 });
-// Delete order
+// Delete  completed order
 app.delete('/CompletedOrder/:id', async (req, res) => {
     try {
         await CompletedOrder.findByIdAndDelete(req.params.id);
@@ -100,6 +102,7 @@ app.delete('/CompletedOrder/:id', async (req, res) => {
     }
 });
 
+// <------------------check server is running------------>
 app.listen(port, async () => {
     try {
         await connection;
