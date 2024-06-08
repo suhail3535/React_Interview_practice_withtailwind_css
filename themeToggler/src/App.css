@@ -1,0 +1,32 @@
+
+.light{
+  background:lightgoldenrodyellow;
+  border: 1px solid black;
+}
+.dark{
+  background-color: black;
+  border: 1px solid rgb(216, 21, 21);
+}
+/* <--------for buttun-------> */
+.bglight{
+  padding: 5px 20px;
+  background-color: rgb(201, 187, 110);
+  color: rgb(14, 9, 9);
+  width: 20%;
+  margin:50px  auto;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+}
+.bgdark {
+  padding: 5px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 20%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 50px auto;
+    display: flex;
+      justify-content: center;
+}
