@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const app = express();
 const port = 5000;
-const mongourl = "mongodb+srv://khansohail015:suhailkhan9598@cluster0.ktryazg.mongodb.net/orderMatching?retryWrites=true&w=majority"
+
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
