@@ -13,3 +13,10 @@
 ![themetoggle](https://github.com/suhail3535/React_Interview_practice_withtailwind_css/assets/112754439/e2093ef8-0e54-4660-8322-ba6d4d33b780) 
  ### b). light Theme 
 ![lighttheme](https://github.com/suhail3535/React_Interview_practice_withtailwind_css/assets/112754439/e4c4c7cf-e421-480a-b4de-08d9f6b2028f)
+
+
+## Question -3  Random Background Genrator
+
+![Capturrandombg](https://github.com/suhail3535/React_Interview_practice_withtailwind_css/assets/112754439/2ffa6617-6676-404e-ace0-508cff3e1aa9)
+
+
