@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         table {
-            width: 80%;
+            width: 60%;
             margin: auto;
             text-align: center;
         }
@@ -56,11 +56,11 @@
 <body>
     <a href="./login.html">Login page</a>
 
-    <div id="container">
+    <div id="conatainer">
         <h1 style="text-align: center">Students form</h1>
 
         <form>
-            <input type="text" id="name" placeholder="Enter Name" /><br /><br />
+            <input type="text" id="name" placeholder="Enter  Name" /><br /><br />
             <input type="text" id="mobile" placeholder="Enter Mobile Number" /><br /><br />
             <input type="text" id="city" placeholder="Enter City Name" /><br /><br />
             <select id="course">
@@ -69,7 +69,7 @@
                 <option value="CSS">CSS</option>
                 <option value="javaScript">javaScript</option>
             </select><br /><br />
-            <button type="submit" style="width: 100%;background-color: red;" id="submit">Submit</button><br /><br />
+            <input id="submit" type="submit" /><br /><br />
         </form>
         <hr style="margin-top: 50px" />
         <table id="table" border="1px">
@@ -88,73 +88,25 @@
         </table>
     </div>
     <script>
-        let arr = JSON.parse(localStorage.getItem("userData")) || [];
+        let allData = JSON.parse(localStorage.getItem("userData")) || [];
         let form = document.querySelector("form");
-        let state = false;
-        let currentIndex = null;
-
-        function postData () {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
             let data = {
                 name: document.getElementById("name").value,
                 mobile: document.getElementById("mobile").value,
                 city: document.getElementById("city").value,
                 course: document.getElementById("course").value,
             };
-
-            if (data.name === "" || data.mobile === "" || data.city === "" || data.course === "") {
-                alert("Please fill all the details");
-                return;
-            } else {
-                arr.push(data);
-                localStorage.setItem("userData", JSON.stringify(arr));
-                form.reset();
-                showDetails(arr);
-            }
-        }
-
-
-        function update (elevalue,index) {
-                state = true;
-                currentIndex = index;
-                document.getElementById("name").value = elevalue.name;
-                document.getElementById("mobile").value = elevalue.mobile;
-                document.getElementById("city").value = elevalue.city;
-                document.getElementById("course").value = elevalue.course;
-                document.getElementById("submit").innerText = "Update";
-            }
-        function updateData () {
-            let updatedData = {
-                name: document.getElementById("name").value,
-                mobile: document.getElementById("mobile").value,
-                city: document.getElementById("city").value,
-                course: document.getElementById("course").value,
-            };
-
-            if (updatedData.name === "" || updatedData.mobile === "" || updatedData.city === "" || updatedData.course === "") {
-                alert("Please fill all the details");
-                return;
-            } else {
-                arr[currentIndex] = updatedData;
-                localStorage.setItem("userData", JSON.stringify(arr));
-                form.reset();
-                showDetails(arr);
-                state = false;
-                document.getElementById("submit").innerText = "Submit";
-            }
-        }
-
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            if (!state) {
-                postData();
-            } else {
-                updateData();
-            }
+            allData.push(data);
+            localStorage.setItem("userData", JSON.stringify(allData));
+            form.reset();
+            showDeatils(allData);
         });
 
-        function showDetails (data) {
-            let tbody = document.getElementById("tbody");
+        let tbody = document.getElementById("tbody");
+
+        function showDeatils (data) {
             tbody.innerHTML = null;
             data.forEach((ele, index) => {
                 let tr = document.createElement("tr");
@@ -183,30 +135,33 @@
 
                 let action = document.createElement("td");
                 let add = document.createElement("button");
-                add.innerText = "Add to cart";
+                add.innerText = "Add";
                 add.addEventListener("click", () => {
                     addData("favData", ele);
-                    alert("Data added to favorites");
+                    alert("data Add to Fav");
                 });
-                let edit = document.createElement("button");
 
-                edit.innerText = "Edit";
-                edit.addEventListener("click", () => {
-                    update(ele,index)
-                });
                 let del = document.createElement("button");
                 del.innerText = "Delete";
                 del.addEventListener("click", () => {
-                    delData(arr, index);
-                    alert("Data deleted");
-                    showDetails(arr);
+                    delData(allData, index);
+                    alert("deleted");
+                    showDeatils(allData);
                 });
-                action.append(add, edit, del);
+                let edit = document.createElement("button");
+                edit.innerText = "Edit";
+                edit.addEventListener("click", () => {
+                    getRowData(ele)
+
+
+                });
+                action.append(add, del, edit);
 
                 tr.append(td1, td2, td3, td4, td5, td6, action);
                 tbody.append(tr);
             });
         }
+        showDeatils(allData);
 
         function addData (key, value) {
             let newData = JSON.parse(localStorage.getItem("favData")) || [];
@@ -219,7 +174,22 @@
             localStorage.setItem("userData", JSON.stringify(data));
         }
 
-        showDetails(arr);
+
+    let userId = null;
+    function getRowData (data,index) {
+        userId = data.index;
+        console.log(data);
+
+        document.getElementById("name").value = data.name;
+
+        document.getElementById("mobile").value = data.mobile;
+        document.getElementById("city").value = data.city;
+        document.getElementById("course").value = data.course;
+        document.getElementById("submit").innerText = "Save";
+    }
+
+
+
     </script>
 </body>
 

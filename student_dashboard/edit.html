@@ -113,15 +113,16 @@
         }
 
 
-        function update (elevalue,index) {
-                state = true;
-                currentIndex = index;
-                document.getElementById("name").value = elevalue.name;
-                document.getElementById("mobile").value = elevalue.mobile;
-                document.getElementById("city").value = elevalue.city;
-                document.getElementById("course").value = elevalue.course;
-                document.getElementById("submit").innerText = "Update";
-            }
+        function update (elevalue, index) {
+            state = true;
+            currentIndex = index;
+            document.getElementById("name").value = elevalue.name;
+            document.getElementById("mobile").value = elevalue.mobile;
+            document.getElementById("city").value = elevalue.city;
+            document.getElementById("course").value = elevalue.course;
+            document.getElementById("submit").innerText = "Update";
+        }
+
         function updateData () {
             let updatedData = {
                 name: document.getElementById("name").value,
@@ -152,6 +153,7 @@
                 updateData();
             }
         });
+        
 
         function showDetails (data) {
             let tbody = document.getElementById("tbody");
@@ -169,57 +171,25 @@
                 let td5 = document.createElement("td");
                 td5.innerText = ele.course;
                 let td6 = document.createElement("td");
-
-                if (ele.course == "HTML") {
-                    td6.innerText = "Completed";
-                    td6.style.background = "lightgreen";
-                } else if (ele.course == "CSS") {
-                    td6.innerText = "Pending";
-                    td6.style.background = "yellow";
-                } else {
-                    td6.innerText = "Not Completed";
-                    td6.style.backgroundColor = "red";
-                }
-
-                let action = document.createElement("td");
-                let add = document.createElement("button");
-                add.innerText = "Add to cart";
-                add.addEventListener("click", () => {
-                    addData("favData", ele);
-                    alert("Data added to favorites");
-                });
-                let edit = document.createElement("button");
-
-                edit.innerText = "Edit";
-                edit.addEventListener("click", () => {
-                    update(ele,index)
-                });
-                let del = document.createElement("button");
-                del.innerText = "Delete";
-                del.addEventListener("click", () => {
-                    delData(arr, index);
-                    alert("Data deleted");
-                    showDetails(arr);
-                });
-                action.append(add, edit, del);
-
+                 let action = document.createElement("td");
+                 let edit = document.createElement("button");
+                 edit.innerText = "Edit";
+                 edit.addEventListener("click", () => {
+                     update(ele, index)
+                     });
+                     action.append(edit);
                 tr.append(td1, td2, td3, td4, td5, td6, action);
                 tbody.append(tr);
-            });
-        }
+                });
+                }
+                showDetails(arr);
 
-        function addData (key, value) {
-            let newData = JSON.parse(localStorage.getItem("favData")) || [];
-            newData.push(value);
-            localStorage.setItem(key, JSON.stringify(newData));
-        }
 
-        function delData (data, index) {
-            data.splice(index, 1);
-            localStorage.setItem("userData", JSON.stringify(data));
-        }
 
-        showDetails(arr);
+
+
+
+
     </script>
 </body>
 

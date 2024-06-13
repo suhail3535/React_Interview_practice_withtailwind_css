@@ -91,9 +91,10 @@
         let arr = JSON.parse(localStorage.getItem("userData")) || [];
         let form = document.querySelector("form");
         let state = false;
-        let currentIndex = null;
+        let currentIndex = null
+        // <-------------for postdata--------->
 
-        function postData () {
+        function getuservalue () {
             let data = {
                 name: document.getElementById("name").value,
                 mobile: document.getElementById("mobile").value,
@@ -112,46 +113,32 @@
             }
         }
 
-
-        function update (elevalue,index) {
-                state = true;
-                currentIndex = index;
-                document.getElementById("name").value = elevalue.name;
-                document.getElementById("mobile").value = elevalue.mobile;
-                document.getElementById("city").value = elevalue.city;
-                document.getElementById("course").value = elevalue.course;
-                document.getElementById("submit").innerText = "Update";
-            }
-        function updateData () {
-            let updatedData = {
-                name: document.getElementById("name").value,
-                mobile: document.getElementById("mobile").value,
-                city: document.getElementById("city").value,
-                course: document.getElementById("course").value,
+        // <----------used for get value from table--------->
+        function getValueForEdit (data, newindex) {
+            state = true;
+            currentIndex = newindex
+            console.log(data, state, newindex);
+            let newdata = {
+                name: document.getElementById("name").value = data.name,
+                mobile: document.getElementById("mobile").value = data.mobile,
+                city: document.getElementById("city").value = data.city,
+                course: document.getElementById("course").value = data.course,
             };
-
-            if (updatedData.name === "" || updatedData.mobile === "" || updatedData.city === "" || updatedData.course === "") {
-                alert("Please fill all the details");
-                return;
-            } else {
-                arr[currentIndex] = updatedData;
-                localStorage.setItem("userData", JSON.stringify(arr));
-                form.reset();
-                showDetails(arr);
-                state = false;
-                document.getElementById("submit").innerText = "Submit";
-            }
         }
 
 
+
+
+
         form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            if (!state) {
-                postData();
-            } else {
-                updateData();
-            }
-        });
+            e.preventDefault()
+            postData()
+        })
+
+
+
+
+
 
         function showDetails (data) {
             let tbody = document.getElementById("tbody");
@@ -169,57 +156,25 @@
                 let td5 = document.createElement("td");
                 td5.innerText = ele.course;
                 let td6 = document.createElement("td");
-
-                if (ele.course == "HTML") {
-                    td6.innerText = "Completed";
-                    td6.style.background = "lightgreen";
-                } else if (ele.course == "CSS") {
-                    td6.innerText = "Pending";
-                    td6.style.background = "yellow";
-                } else {
-                    td6.innerText = "Not Completed";
-                    td6.style.backgroundColor = "red";
-                }
-
                 let action = document.createElement("td");
-                let add = document.createElement("button");
-                add.innerText = "Add to cart";
-                add.addEventListener("click", () => {
-                    addData("favData", ele);
-                    alert("Data added to favorites");
-                });
                 let edit = document.createElement("button");
-
                 edit.innerText = "Edit";
                 edit.addEventListener("click", () => {
-                    update(ele,index)
+                    getValueForEdit(ele, index)
                 });
-                let del = document.createElement("button");
-                del.innerText = "Delete";
-                del.addEventListener("click", () => {
-                    delData(arr, index);
-                    alert("Data deleted");
-                    showDetails(arr);
-                });
-                action.append(add, edit, del);
-
+                action.append(edit);
                 tr.append(td1, td2, td3, td4, td5, td6, action);
                 tbody.append(tr);
             });
         }
-
-        function addData (key, value) {
-            let newData = JSON.parse(localStorage.getItem("favData")) || [];
-            newData.push(value);
-            localStorage.setItem(key, JSON.stringify(newData));
-        }
-
-        function delData (data, index) {
-            data.splice(index, 1);
-            localStorage.setItem("userData", JSON.stringify(data));
-        }
-
         showDetails(arr);
+
+
+
+
+
+
+
     </script>
 </body>
 
