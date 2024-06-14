@@ -4,7 +4,12 @@
     transition: all 0.5s ease-in-out;
     /* Smooth transition for sliding items */
 }
-
+.App{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    /* border: 2px solid green; */
+}
 .arrow {
     display: flex;
     align-items: center;
