@@ -112,7 +112,27 @@
                 showDetails(arr);
             }
         }
+    function getuservalueforedit () {
+        let data = {
+            name: document.getElementById("name").value,
+            mobile: document.getElementById("mobile").value,
+            city: document.getElementById("city").value,
+            course: document.getElementById("course").value,
+        };
 
+        if (data.name === "" || data.mobile === "" || data.city === "" || data.course === "") {
+            alert("Please fill all the details");
+            return;
+        } else {
+            arr[currentIndex]=data;
+            localStorage.setItem("userData", JSON.stringify(arr));
+            form.reset();
+            document.getElementById("submit").innerText = "Submit"
+
+            showDetails(arr);
+            state=false
+        }
+    }
         // <----------used for get value from table--------->
         function getValueForEdit (data, newindex) {
             state = true;
@@ -123,7 +143,8 @@
                 mobile: document.getElementById("mobile").value = data.mobile,
                 city: document.getElementById("city").value = data.city,
                 course: document.getElementById("course").value = data.course,
-            };
+                };
+            document.getElementById("submit").innerText="Update"
         }
 
 
@@ -132,7 +153,12 @@
 
         form.addEventListener("submit", (e) => {
             e.preventDefault()
-            postData()
+            if(!state){
+                getuservalue()
+
+            }else{
+                getuservalueforedit()
+            }
         })
 
 
