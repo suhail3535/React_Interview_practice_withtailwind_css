@@ -4,7 +4,7 @@
     transition: all 0.5s ease-in-out;
     /* Smooth transition for sliding items */
 }
-.App{
+.main_slider_app{
     width: 90%;
     margin: auto;
     padding: 10px;

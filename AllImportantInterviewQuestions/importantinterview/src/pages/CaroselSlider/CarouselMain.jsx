@@ -213,7 +213,7 @@ function CaroselMain () {
     ];
 
     return (
-        <div className="App">
+        <div className="main_slider_app">
             <h1>React Carousel with Multiple Cards Example</h1>
             <Carousel items={items} />
         </div>
