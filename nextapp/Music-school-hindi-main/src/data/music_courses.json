@@ -8,7 +8,7 @@
         "price": 99.99,
         "instructor": "John Doe",
         "isFeatured": true,
-        "image": "/courses/guitar.jpg" 
+        "image": "/courses/guitar.jpg"
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "price": 109.99,
         "instructor": "Jane Smith",
         "isFeatured": false,
-        "image": "/courses/piano.jpg" 
+        "image": "/courses/piano.jpg"
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "price": 119.99,
         "instructor": "Emily Johnson",
         "isFeatured": true,
-        "image": "/courses/vocalist.jpg" 
+        "image": "/courses/vocalist.jpg"
       },
       {
         "id": 4,
@@ -99,7 +99,16 @@
         "instructor": "Ethan Moore",
         "isFeatured": true,
         "image": "/courses/blues.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Songwriting Essentials",
+        "slug": "songwriting-essentials",
+        "description": "Learn the essentials of songwriting to express your musical creativity.",
+        "price": 159.99,
+        "instructor": "Samantha Miller",
+        "isFeatured": true,
+        "image": "/courses/song-writing.jpg"
       }
     ]
   }
-  
