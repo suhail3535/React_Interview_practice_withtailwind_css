@@ -33,7 +33,7 @@ const Welcome = (props) => <h1>Hello, {props.name}</h1>;
 <!-- <-------------------------------->
 
 6. What is state in React?
-Answer:In React  State is a built-in object that stores property values that belong to a component. When the state object changes, the component re-renders.
+Answer:In React  State is a built-in object that stores property values which is belong to a component. When the state object changes, the component will re-renders.
 Example:-
 class Counter extends React.Component {
   constructor(props) {
@@ -74,7 +74,7 @@ Answer: Redux is a predictable state container for JavaScript applications. It h
 <!-- <-------------------------------->
 
 10. What is a higher-order component (HOC)?
-Answer: A higher-order component is a function that takes a component and returns a new component. HOCs are used to add functionality to existing components.
+Answer: A higher-order component is a function that takes a component as parameter and returns a new component as its value. HOCs are used to add functionality to existing components.
 Example:-
 import React from 'react';
 const withLoading = (WrappedComponent) => {
@@ -94,7 +94,6 @@ export default withLoading;
 Answer: The useEffect hook allows you to perform side effects in functional components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
 Example:-
 import React, { useEffect } from 'react';
-<!-- <-------------------------------->
 
 const MyComponent = () => {
   useEffect(() => {
@@ -261,6 +260,7 @@ Example:-
 import React, { useRef } from 'react';
 const FocusInput = () => {
 const inputRef = useRef(null);
+
 const handleClick = () => {
     inputRef.current.focus();
   };
