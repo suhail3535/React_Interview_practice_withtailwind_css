@@ -432,23 +432,22 @@ It selects elements based on their position among a group of siblings.
 30. What is the purpose of the align-self property in Flexbox?
     The align-self property allows you to override the align-items property for individual flex items, aligning them along the cross axis of the flex container.
 
-
-  <==========HR important ========>
-  Why do you want to join us?
+06/29 88 8976 697
+<==========HR important ========>
+Why do you want to join us?
 "I am excited about the opportunity to join Quintype technology due to its impressive track record in transforming the digital publishing landscape with innovative solutions.
- Quintype’s is a AI-powered platform enables publishers to create, distribute, and monetize their content efficiently.
+Quintype’s is a AI-powered platform enables publishers to create, distribute, and monetize their content efficiently.
 Quintype was founded in 2015, headquartered in Bengaluru, India, and has recently opened its UAE office to further its expansion across MENA.
 
 Quintype manages over 1Bn monthly pageviews for over 200+ publishers, including marquee brands like BQ Prime, The Quint, Fortune India, Karjalainen, and i-mediat.
 
-I am particularly impressed by Quintype’s products 
+I am particularly impressed by Quintype’s products
 1-AI-powered Newsroom Content Management System (CMS)
 2-audience engagement tools,
 3-paywall management,
-4-mobile App and subscription models. 
+4-mobile App and subscription models.
 and the other thigs QuinType's experienced leadership and dedicated teams indicate a culture of excellence and innovation.
- I believe that joining your company would provide me with the perfect environment to grow as a fullstack developer. I am eager to bring my skills and experiences to your team and be a part of the exciting journey ahead.
-
+I believe that joining your company would provide me with the perfect environment to grow as a fullstack developer. I am eager to bring my skills and experiences to your team and be a part of the exciting journey ahead.
 
 <===========Why should be hire you=========>
 You should hire me because
@@ -465,22 +464,20 @@ Communication Skills: I possess strong communication and interpersonal skills, e
 
 Overall, my technical skills, collaborative mindset, and dedication to excellence make me an ideal candidate for the frontend developer role at your company. I am excited about the opportunity to contribute to your team and help drive the company's success."
 
-
 <===============================>
 <===============Strengths==============>
-
-“One of my key strengths is my attention to detail. In full stack development, ensuring both the frontend and backend work seamlessly together is crucial. I’m confident in reviewing my code and designs, which helps me catch potential issues early and deliver high-quality work. 
+“One of my key strengths is my attention to detail. In full stack development, ensuring both the frontend and backend work seamlessly together is crucial. I’m confident in reviewing my code and designs, which helps me catch potential issues early and deliver high-quality work.
 Additionally, my strong problem-solving skills allow me to efficiently debug and optimize both frontend and backend code, enhancing the overall performance and user experience.
- Effective communication is another strength; I can convey complex technical concepts to non-technical stakeholders, ensuring everyone is aligned and project goals are met.”
+Effective communication is another strength; I can convey complex technical concepts to non-technical stakeholders, ensuring everyone is aligned and project goals are met.”
 
 <=========Weaknesses============>
 “One area I’m working on is my tendency towards perfectionism. While it drives me to produce high-quality work, it can sometimes lead to spending more time on minor details than necessary. I’m learning to balance this by setting realistic goals and focusing on the overall impact of my work. Another area is my reluctance to delegate tasks, as I want to ensure everything is done correctly. I’ve been improving by mentoring team members and trusting their capabilities, which has been beneficial for team productivity. Lastly, I have a tendency to take on too many projects at once, but I’m getting better at prioritizing tasks and managing my workload using project management tools.”
 
 <============Are you a team player or independent worker===========>
-I consider myself both a team player and an independent worker, as I believe both skills are essential for a successful  developer. In my previous roles, I’ve had the opportunity to collaborate with cross-functional teams, including designers, backend developers, and product managers. I enjoy there ideas, sharing knowledge, and collectively solving problems to achieve our project goals.
+I consider myself both a team player and an independent worker, as I believe both skills are essential for a successful developer. In my previous roles, I’ve had the opportunity to collaborate with cross-functional teams, including designers, backend developers, and product managers. I enjoy there ideas, sharing knowledge, and collectively solving problems to achieve our project goals.
 
 At the same time, I am very comfortable working independently. I am able to manage my time efficiently, set priorities, and meet deadlines without constant supervision. For instance, when implementing complex features or fixing bugs, I often work independently to research solutions, write code, and test functionalities thoroughly.
- I value the focus and productivity that come with independent work, which allows me to deliver high-quality results.
+I value the focus and productivity that come with independent work, which allows me to deliver high-quality results.
 
 Overall, I thrive in environments that require both teamwork and independent work, and I can easily switch between the two depending on the needs of the project and the team.”
 <========================================>
@@ -489,18 +486,17 @@ Flexibility: Show that you can adapt to different work styles and environments.
 Team Collaboration: Provide examples of successful teamwork and how it contributed to project success.
 Independent Work: Highlight your ability to work independently, manage your time, and deliver high-quality work.
 Balance: Emphasize that you understand the importance of both approaches and can balance them effectively.
+<==========Introduction=========>
 
+Hello sir, a very good afternoon to you. My name is Suhail Khan. I am a Fullstack Developer with nearly 2 years of hands-on experience in building and maintaining web applications. I am from District Hardoi, Uttar Pradesh.
 
+I completed my graduation in 2020 from Dr. APJ Abdul Kalam Technical University, Lucknow, Uttar Pradesh. Currently, I am working as a Fullstack Developer with the Rajasthan Police Headquarters in Jaipur on a contract basis. Before that, I worked as a React.js Developer with Vastu Housing Finance Corporation Pvt. Ltd. in Nashik, Maharashtra.
 
-Hello sir,a very good evening to you,c
-My name is Suhail Khan from District Hardoi, Uttar Pradesh, India. I completed my graduation in 2020 from Dr. APJ Abdul Kalam Technical University, Lucknow, Uttar Pradesh.
-
-If I talk about my professional experience, I recently worked as a full-stack developer with the Rajasthan Police Headquarters in Jaipur, it is a contract based job. Before that, I was worked as a React.js developer with Vastu Housing Finance Corporation Pvt. Ltd. in Nashik, Maharashtra.
-
-Apart from work, I enjoy traveling and exploring new places. I also like watching cricket.
+Apart from work, I enjoy traveling and exploring new places.
 
 Regarding my family, we are 5 members including me. My father is a farmer, and my mother is a housewife.
 
 That's all about me. Thank you, sir.
+
 SA vs SL 9th edition w-t20
 IND vs IRL-8-6-2024
