@@ -435,8 +435,9 @@ It selects elements based on their position among a group of siblings.
 06/29 88 8976 697
 <==========HR important ========>
 Why do you want to join us?
-"I am excited about the opportunity to join Quintype technology due to its impressive track record in transforming the digital publishing landscape with innovative solutions.
-Quintype’s is a AI-powered platform enables publishers to create, distribute, and monetize their content efficiently.
+"I am excited about the opportunity to join Quintype technologies pvt ltd. due to its impressive track record in transforming the digital publishing landscape with innovative solutions.
+Quintype is a leading AI-powered digital newsroom growth platform that empowers publishers to create, distribute and monetise their content effecently.
+
 Quintype was founded in 2015, headquartered in Bengaluru, India, and has recently opened its UAE office to further its expansion across MENA.
 
 Quintype manages over 1Bn monthly pageviews for over 200+ publishers, including marquee brands like BQ Prime, The Quint, Fortune India, Karjalainen, and i-mediat.
@@ -445,9 +446,11 @@ I am particularly impressed by Quintype’s products
 1-AI-powered Newsroom Content Management System (CMS)
 2-audience engagement tools,
 3-paywall management,
-4-mobile App and subscription models.
+4-webpage builder
+5-mobile App and subscription models.
+6-Editorial AI
 and the other thigs QuinType's experienced leadership and dedicated teams indicate a culture of excellence and innovation.
-I believe that joining your company would provide me with the perfect environment to grow as a fullstack developer. I am eager to bring my skills and experiences to your team and be a part of the exciting journey ahead.
+I believe that joining your company would provide me with the perfect environment to grow as a softwere engineer. I am eager to bring my skills and experiences to your team and be a part of the exciting journey ahead.
 
 <===========Why should be hire you=========>
 You should hire me because
@@ -488,7 +491,7 @@ Independent Work: Highlight your ability to work independently, manage your time
 Balance: Emphasize that you understand the importance of both approaches and can balance them effectively.
 <==========Introduction=========>
 
-Hello sir, a very good afternoon to you. My name is Suhail Khan. I am a Fullstack Developer with nearly 2 years of hands-on experience in building and maintaining web applications. I am from District Hardoi, Uttar Pradesh.
+Hello sir, a very good evening  to you. My name is Suhail Khan. I am a Fullstack Developer with nearly 2 years of hands-on experience in building and maintaining web applications. I am from District Hardoi, Uttar Pradesh.
 
 I completed my graduation in 2020 from Dr. APJ Abdul Kalam Technical University, Lucknow, Uttar Pradesh. Currently, I am working as a Fullstack Developer with the Rajasthan Police Headquarters in Jaipur on a contract basis. Before that, I worked as a React.js Developer with Vastu Housing Finance Corporation Pvt. Ltd. in Nashik, Maharashtra.
 
