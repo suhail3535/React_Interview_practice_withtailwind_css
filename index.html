@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, perspiciatis!
-</body>
-<script>
-let interval=setInterval(()=>{
+  </head>
+  <body>
+    Email: <input id="email" type="text" placeholder="email" /> <br />
+    Password: <input id="password" type="text" placeholder="password" /> <br />
+    <button id="btn">Login</button>
+    <hr />
+    <p id="msg"></p>
+    <hr>
+    user:
+    <span id="logo"></span>
+  </body>
 
-    console.log("sohan")
-},1000)
+  <script>
+    let btn = document.getElementById("btn");
+    let msg = document.getElementById("msg");
+    let logo = document.getElementById("logo");
+    let arr = [
+      { email: "chuunu@gmail.com", password: "123456" },
+      { email: "munnu@gmail.com", password: "678933" },
+    ];
 
-</script>
+    function loginUser() {
+      let userDeatils = {
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      };
+let value = arr.find((user) =>
+          user.email === userDeatils.email &&
+          user.password === userDeatils.password
+      );
+      if (value) {
+        msg.innerText = "Login Done";
+        msg.style.color = "green";
+        logo.innerText=value.email
+        
+      } else {
+        msg.innerText = "Details not Found";
+        msg.style.color = "red";
+      }
+    }
+
+    btn.addEventListener("click", () => {
+      loginUser();
+    });
+  </script>
 </html>
