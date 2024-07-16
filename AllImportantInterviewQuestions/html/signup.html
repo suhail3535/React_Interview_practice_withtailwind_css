@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Signup</h2>
+            </div>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Signup</button>
+            </form>
+            <div class="footer">
+                <p>Already have an account? <a href="index.html">Click here</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let form=document.getElementById("signup-form")
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            
+            // Create a new user object
+            const newUser = { name, email, password };
+            
+            // Get existing users from local storage
+            let users = localStorage.getItem('users');
+            users = users ? JSON.parse(users) : [];
+            
+            // Push the new user object into the array
+            users.push(newUser);
+            
+            // Save the updated array back to local storage
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            alert('Signup information saved to local storage.');
+            form.reset()
+        });
+    </script>
+</body>
+</html>

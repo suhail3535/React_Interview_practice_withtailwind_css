@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 40%;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+      }
+      div input {
+        width: 80%;
+        margin: auto;
+      }
+      button {
+        background-color: gainsboro;
+        padding: 10px 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Chunnu Bank</h1>
+      <h1>Available Balance <span id="avl-balance">0</span></h1>
+      <input id="amt" type="number" placeholder="Enter Amt" />
+      <br /><br />
+      <button>Withdrawal</button>
+      <button onclick="deposit()">Deposit</button>
+    </div>
+  </body>
+  <script>
+    let totalbalance = document.getElementById("avl-balance");
+    
+    function deposit() {
+        let inputValue = document.getElementById("amt").value;
+        if (inputValue) {
+          totalBalance.innerText = parseFloat(totalBalance.innerText) + parseFloat(inputValue);
+          alert("Deposit successful");
+          document.getElementById("amt").value = "";
+        } else {
+          alert("Please enter an amount to deposit");
+        }
+      }
+  </script>
+</html>

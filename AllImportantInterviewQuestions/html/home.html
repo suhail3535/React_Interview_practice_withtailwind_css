@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      nav {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: blue;
+        color: whitesmoke;
+        padding: 20px;
+      }
+      #usercridential {
+        display: flex;
+        width: 30%;
+        gap: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Welcome to home</div>
+    <nav>
+      <div class="nav-item">Logo</div>
+      <div class="nav-item">Navlink</div>
+      <div id="usercridential">
+        <div id="useremail" class="nav-item">user</div>
+        <button id="userlog" class="nav-item"></button>
+      </div>
+    </nav>
+    <script>
+      const loggedInEmail = localStorage.getItem("loggedInEmail")||[];
+      let btn = document.getElementById("userlog");
+      btn.style.display="none";
+
+      if (loggedInEmail) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find((user) => user.email === loggedInEmail);
+        if (user) {
+          document.getElementById("useremail").innerText = user.email;
+          btn.innerText = "Logout";
+          btn.style.display = "block";
+        }
+      } else {
+        window.location.href = "login.html";
+
+      }
+
+      function removeKeyFromLocalStorage() {
+        localStorage.removeItem("loggedInEmail");
+        alert(`User ${loggedInEmail} logout successful.`);
+        window.location.href = "index.html";
+      }
+
+      btn.addEventListener("click", removeKeyFromLocalStorage);
+    </script>
+  </body>
+</html>
