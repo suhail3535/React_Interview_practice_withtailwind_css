@@ -40,18 +40,14 @@
         const users = JSON.parse(localStorage.getItem("users")) || [];
         const user = users.find((user) => user.email === loggedInEmail);
         if (user) {
-          document.getElementById("useremail").innerText = user.email;
+          document.getElementById("useremail").innerText = user.name;
           btn.innerText = "Logout";
           btn.style.display = "block";
         }
       } else {
         window.location.href = "login.html";
-
       }
-
-      function removeKeyFromLocalStorage() {
-        localStorage.removeItem("loggedInEmail");
-        alert(`User ${loggedInEmail} logout successful.`);
+     function removeKeyFromLocalStorage() {
         window.location.href = "index.html";
       }
 

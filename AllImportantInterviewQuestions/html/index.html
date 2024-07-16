@@ -45,11 +45,11 @@
           // Retrieve users from local storage
 
           // Check if the email and password match any user
-          const user = users.find(
+          const userdeta = users.find(
             (user) => user.email === email && user.password === password
           );
 
-          if (user) {
+          if (userdeta) {
             // Save the logged-in user's email in local storage
             localStorage.setItem("loggedInEmail", email);
 

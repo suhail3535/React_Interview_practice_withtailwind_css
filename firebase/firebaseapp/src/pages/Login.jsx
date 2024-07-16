@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { app } from "../firebase";
+import logo from "../assets/google.jpg"
 // import { useNavigate } from "react-router-dom";
 const auth = getAuth(app);
 
@@ -35,6 +36,7 @@ const Login = () => {
   if (usernameid) {
     alert(`Hello ${username}`);
   }
+ 
   return (
     <div>
       <label>Email</label>
@@ -54,6 +56,7 @@ const Login = () => {
       />
 
       <button onClick={loginUser}>Submit</button>
+      
 
       <div>
         {username && <h1>{username}</h1>}
